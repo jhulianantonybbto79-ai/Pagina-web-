@@ -1,0 +1,1150 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magnus Training Center | Oruro</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --rojo: #e32636;
+    --negro: #101010;
+    --gris: #191919;
+    --gris2: #242424;
+    --blanco: #fff;
+    --texto: #bdbdbd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--negro);
+    color: var(--blanco);
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+section {
+    padding: 85px 0;
+}
+
+.etiqueta {
+    color: var(--rojo);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.titulo {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.05;
+    text-transform: uppercase;
+}
+
+.titulo span {
+    color: var(--rojo);
+}
+
+.descripcion {
+    color: var(--texto);
+    max-width: 680px;
+    font-size: 14px;
+    margin-top: 14px;
+}
+
+.boton {
+    display: inline-block;
+    background: var(--rojo);
+    color: white;
+    padding: 13px 24px;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid var(--rojo);
+    transition: .3s;
+}
+
+.boton:hover {
+    background: transparent;
+    color: var(--rojo);
+}
+
+.boton-borde {
+    display: inline-block;
+    padding: 13px 24px;
+    border: 1px solid white;
+    color: white;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+.boton-borde:hover {
+    background: white;
+    color: black;
+}
+
+/* ENCABEZADO */
+
+header {
+    background: rgba(10,10,10,.97);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #333;
+}
+
+.navbar {
+    min-height: 82px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.marca img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    background: white;
+    border-radius: 50%;
+}
+
+.marca-texto {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 23px;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.marca-texto span {
+    color: var(--rojo);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.menu a {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+.menu a:hover {
+    color: var(--rojo);
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* PORTADA */
+
+.inicio {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    background:
+    linear-gradient(90deg,rgba(0,0,0,.96),rgba(0,0,0,.68),rgba(0,0,0,.28)),
+    url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyol3A1HbTvnnQJz-ZMPVL7dYpRLi21U05oydQ663DSgC6PeIHCvPy-J8v&s=10');
+    background-size: cover;
+    background-position: center;
+}
+
+.inicio-contenido {
+    max-width: 730px;
+    padding: 100px 0;
+}
+
+.inicio h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(60px, 9vw, 105px);
+    line-height: .93;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 18px 0 25px;
+}
+
+.inicio h1 span {
+    color: var(--rojo);
+    display: block;
+}
+
+.inicio p {
+    max-width: 570px;
+    color: #ddd;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+/* FRANJA */
+
+.franja {
+    background: var(--rojo);
+    padding: 18px 0;
+}
+
+.franja-contenido {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+    text-align: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+/* NOSOTROS */
+
+.nosotros {
+    background: #151515;
+}
+
+.dos-columnas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.foto-principal {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    border-left: 5px solid var(--rojo);
+}
+
+.texto p {
+    color: var(--texto);
+    font-size: 14px;
+    margin: 17px 0;
+}
+
+.lista {
+    list-style: none;
+    margin: 22px 0;
+}
+
+.lista li {
+    font-size: 14px;
+    margin: 12px 0;
+    font-weight: 600;
+}
+
+.lista li::before {
+    content: "✓";
+    color: var(--rojo);
+    margin-right: 12px;
+    font-weight: 900;
+}
+
+/* ENTRENAMIENTOS */
+
+.entrenamientos {
+    background: var(--negro);
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.tarjeta {
+    background: var(--gris);
+    overflow: hidden;
+    border-bottom: 3px solid transparent;
+    transition: .3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-7px);
+    border-color: var(--rojo);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 235px;
+    object-fit: cover;
+}
+
+.tarjeta-contenido {
+    padding: 24px;
+}
+
+.tarjeta h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 29px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.tarjeta p {
+    color: var(--texto);
+    font-size: 13px;
+}
+
+/* PLANES */
+
+.planes {
+    background: #151515;
+}
+
+.planes-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.plan {
+    background: #202020;
+    padding: 32px 25px;
+    text-align: center;
+    border: 1px solid #373737;
+    transition: .3s;
+}
+
+.plan:hover {
+    border-color: var(--rojo);
+    transform: translateY(-5px);
+}
+
+.plan.destacado {
+    border: 2px solid var(--rojo);
+}
+
+.plan-etiqueta {
+    display: inline-block;
+    background: var(--rojo);
+    padding: 5px 12px;
+    font-size: 10px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.plan h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.precio {
+    color: var(--rojo);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 55px;
+    font-weight: 900;
+    margin: 15px 0;
+}
+
+.precio small {
+    color: var(--texto);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+}
+
+.plan ul {
+    list-style: none;
+    margin: 20px 0;
+    color: var(--texto);
+    font-size: 13px;
+}
+
+.plan li {
+    padding: 10px 0;
+    border-bottom: 1px solid #383838;
+}
+
+.plan .boton {
+    width: 100%;
+}
+
+/* GALERÍA */
+
+.galeria {
+    background: var(--negro);
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: 235px;
+    gap: 15px;
+    margin-top: 38px;
+}
+
+.galeria-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(.83);
+    transition: .3s;
+}
+
+.galeria-grid img:hover {
+    filter: brightness(1);
+    transform: scale(1.02);
+}
+
+.galeria-grid .grande {
+    grid-row: span 2;
+}
+
+/* HORARIOS */
+
+.horarios {
+    background: #151515;
+}
+
+.tabla-horarios {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+}
+
+.tabla-horarios td {
+    padding: 15px 10px;
+    border-bottom: 1px solid #393939;
+    font-size: 13px;
+}
+
+.tabla-horarios td:last-child {
+    color: var(--rojo);
+    font-weight: 800;
+    text-align: right;
+}
+
+.nota-horario {
+    color: #888;
+    font-size: 11px;
+    margin-top: 15px;
+}
+
+.foto-horarios {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+}
+
+/* CONTACTO */
+
+.contacto {
+    background:
+    linear-gradient(rgba(0,0,0,.91),rgba(0,0,0,.93)),
+    url('https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=1600&q=85');
+    background-size: cover;
+    background-position: center;
+}
+
+.contacto-contenido {
+    max-width: 950px;
+    margin: auto;
+    text-align: center;
+}
+
+.contacto h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(42px,6vw,70px);
+    line-height: 1;
+    text-transform: uppercase;
+    margin: 15px 0;
+}
+
+.contacto h2 span {
+    color: var(--rojo);
+}
+
+.contacto p {
+    color: #ccc;
+    font-size: 14px;
+    max-width: 650px;
+    margin: 15px auto 30px;
+}
+
+.contacto-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 18px;
+    margin: 38px 0;
+}
+
+.contacto-item {
+    background: rgba(30,30,30,.9);
+    border: 1px solid #393939;
+    padding: 25px 15px;
+}
+
+.contacto-item .icono {
+    color: var(--rojo);
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.contacto-item h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 23px;
+    text-transform: uppercase;
+}
+
+.contacto-item p {
+    font-size: 12px;
+    margin: 8px auto;
+    overflow-wrap: anywhere;
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.boton-facebook {
+    background: #1877f2;
+    border-color: #1877f2;
+}
+
+.boton-whatsapp {
+    background: #20b85a;
+    border-color: #20b85a;
+}
+
+/* PIE */
+
+footer {
+    background: #080808;
+    border-top: 1px solid #333;
+    padding: 30px 0;
+}
+
+.footer-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-contenido p {
+    color: #888;
+    font-size: 12px;
+}
+
+.footer-contenido span {
+    color: var(--rojo);
+}
+
+.volver {
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.volver:hover {
+    color: var(--rojo);
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 900px) {
+    .menu {
+        gap: 12px;
+    }
+
+    .menu a {
+        font-size: 9px;
+    }
+
+    .tarjetas, .planes-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width: 700px) {
+    .navbar {
+        min-height: 75px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: #111;
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        border-top: 1px solid #333;
+    }
+
+    .menu.activo {
+        display: flex;
+    }
+
+    .menu a {
+        font-size: 13px;
+        padding: 7px 0;
+    }
+
+    .marca img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .marca-texto {
+        font-size: 19px;
+    }
+
+    section {
+        padding: 65px 0;
+    }
+
+    .inicio {
+        min-height: 560px;
+        background-position: 60% center;
+    }
+
+    .dos-columnas {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .foto-principal {
+        height: 310px;
+    }
+
+    .tarjetas, .planes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria-grid {
+        grid-template-columns: repeat(2,1fr);
+        grid-auto-rows: 170px;
+    }
+
+    .galeria-grid .grande {
+        grid-row: span 1;
+    }
+
+    .foto-horarios {
+        height: 280px;
+    }
+
+    .contacto-tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-contenido {
+        justify-content: center;
+        text-align: center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ENCABEZADO -->
+
+<header>
+    <div class="contenedor navbar">
+
+        <a href="#inicio" class="marca">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0zWCaUZejbWqXz49NhNXQlb9C84E0tVzZIBWvBV1OKZC_M8AQo28wi3cn&s=10" alt="Logo Magnus Training Center">
+
+            <div class="marca-texto">
+                MAGNUS <span>TRAINING</span>
+            </div>
+        </a>
+
+        <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
+
+        <nav class="menu" id="menu">
+            <a href="#inicio">Inicio</a>
+            <U><a href="#nosotros">Nosotros</a></U>
+            <a href="#entrenamientos">Entrenamientos</a>
+            <U><a href="#planes">Planes</a></U>
+            <a href="#horarios">Horarios</a>
+            <U><a href="#galeria">Galería</a></U>
+            <a href="#contacto">Contacto</a>
+        </nav>
+
+    </div>
+</header>
+
+<main>
+
+<!-- INICIO -->
+
+<section class="inicio" id="inicio">
+    <div class="contenedor">
+        <div class="inicio-contenido">
+
+            <div class="etiqueta">Magnus Training Center · Oruro</div>
+
+            <h1>
+                SUPERA TUS
+                <span>LÍMITES</span>
+            </h1>
+
+            <p>
+                Cada entrenamiento es una oportunidad para mejorar.
+                Desarrolla tu fuerza, fortalece tu cuerpo y trabaja
+                por la mejor versión de ti mismo.
+            </p>
+
+            <div class="botones">
+                <a href="#planes" class="boton">Conoce nuestros planes</a>
+                <a href="#nosotros" class="boton-borde">Conócenos</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- FRANJA -->
+
+<div class="franja">
+    <div class="contenedor franja-contenido">
+        <span>FUERZA</span>
+        <span>DISCIPLINA</span>
+        <span>CONSTANCIA</span>
+        <span>RESULTADOS</span>
+    </div>
+</div>
+
+<!-- NOSOTROS -->
+
+<section class="nosotros" id="nosotros">
+    <div class="contenedor dos-columnas">
+
+        <div>
+            <img class="foto-principal"
+            src="https://scontent.flpb1-1.fna.fbcdn.net/v/t39.30808-6/474454565_694329593199888_3598734021342441683_n.jpg?stp=dst-jpg_tt6&cstp=mx1273x720&ctp=s1273x720&_nc_cat=111&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_ohc=FDmTd402u9wQ7kNvwEMXFwG&_nc_oc=AdqwR7R6ktKruMYdDUnedFBAyQ1bewGLauyoPc-QCkqCMJrxnAFAvQkdnmyYJ1zIrnm_AP78fPu2WdZbOhmuXGt4&_nc_zt=23&_nc_ht=scontent.flpb1-1.fna&_nc_gid=UftUofrDqmy_ywcat4jFJQ&_nc_ss=7b289&oh=00_AQRjskjfjUuXBJ8xgRSdfimU4rCUo3pmf7zIP-JXeTtSng&oe=6B0435FB"
+            alt="Interior de gimnasio">
+        </div>
+
+        <div class="texto">
+            <div class="etiqueta">Conócenos</div>
+
+            <h2 class="titulo">
+                BIENVENIDO A <span>MAGNUS</span>
+            </h2>
+
+            <p>
+                Magnus Training Center es un espacio dedicado al
+                entrenamiento físico y al desarrollo de una vida
+                más activa y saludable.
+            </p>
+
+            <p>
+                Creemos que cada persona puede alcanzar nuevos
+                objetivos mediante la disciplina, la constancia
+                y el esfuerzo diario.
+            </p>
+
+            <ul class="lista">
+                <li>Entrenamiento orientado a adultos.</li>
+                <li>Desarrollo de fuerza y resistencia.</li>
+                <li>Espacio para mejorar la condición física.</li>
+                <li>Motivación para alcanzar objetivos personales.</li>
+            </ul>
+
+            <a href="#contacto" class="boton">Contáctanos</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- ENTRENAMIENTOS -->
+
+<section class="entrenamientos" id="entrenamientos">
+    <div class="contenedor">
+
+        <div class="etiqueta">Nuestros servicios</div>
+        <h2 class="titulo">ENTRENA A TU <span>MANERA</span></h2>
+
+        <p class="descripcion">
+            Trabaja diferentes capacidades físicas y encuentra
+            la motivación para avanzar en cada entrenamiento.
+        </p>
+
+        <div class="tarjetas">
+
+            <article class="tarjeta">
+                <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=900&q=85"
+                alt="Entrenamiento de musculación">
+
+                <div class="tarjeta-contenido">
+                    <h3>Musculación</h3>
+                    <p>
+                        Desarrolla fuerza y masa muscular mediante
+                        ejercicios con pesas y máquinas.
+                    </p>
+                </div>
+            </article>
+
+            <article class="tarjeta">
+                <img src="https://images.unsplash.com/photo-1534258936925-c58bed479fcb?auto=format&fit=crop&w=900&q=85"
+                alt="Ejercicio cardiovascular">
+
+                <div class="tarjeta-contenido">
+                    <h3>Cardio</h3>
+                    <p>
+                        Mejora tu resistencia física y fortalece
+                        tu capacidad cardiovascular.
+                    </p>
+                </div>
+            </article>
+
+            <article class="tarjeta">
+                <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=85"
+                alt="Entrenamiento funcional">
+
+                <div class="tarjeta-contenido">
+                    <h3>Entrenamiento funcional</h3>
+                    <p>
+                        Trabaja la movilidad, coordinación y
+                        condición física con ejercicios dinámicos.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- PLANES -->
+
+<section class="planes" id="planes">
+    <div class="contenedor">
+
+        <div class="etiqueta">Inscripciones</div>
+        <h2 class="titulo">ELIGE TU <span>PLAN</span></h2>
+
+        <p class="descripcion">
+            Encuentra una alternativa que se adapte a tu
+            disponibilidad y a tus objetivos.
+        </p>
+
+        <div class="planes-grid">
+
+            <article class="plan">
+                <h3>Plan diario</h3>
+                <div class="precio">Bs 15 <small>/ día</small></div>
+
+                <ul>
+                    <li>Acceso por un día</li>
+                    <li>Área de entrenamiento</li>
+                    <li>Uso de equipamiento</li>
+                    <li>Orientación general</li>
+                </ul>
+
+                <a href="#contacto" class="boton">Consultar</a>
+            </article>
+
+            <article class="plan destacado">
+                <div class="plan-etiqueta">Plan destacado</div>
+                <h3>Plan mensual</h3>
+                <div class="precio">Bs 150 <small>/ mes</small></div>
+
+                <ul>
+                    <li>Acceso durante el mes</li>
+                    <li>Área de musculación</li>
+                    <li>Entrenamiento de cardio</li>
+                    <li>Orientación general</li>
+                </ul>
+
+                <a href="#contacto" class="boton">Consultar</a>
+            </article>
+
+            <article class="plan">
+                <h3>Plan trimestral</h3>
+                <div class="precio">Bs 400 <small>/ 3 meses</small></div>
+
+                <ul>
+                    <li>Acceso durante tres meses</li>
+                    <li>Área de musculación</li>
+                    <li>Entrenamiento de cardio</li>
+                    <li>Opción de ahorro</li>
+                </ul>
+
+                <a href="#contacto" class="boton">Consultar</a>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- GALERÍA -->
+
+<section class="galeria" id="galeria">
+    <div class="contenedor">
+
+        <div class="etiqueta">Nuestro ambiente</div>
+        <h2 class="titulo">GALERÍA DE <span>ENTRENAMIENTO</span></h2>
+
+        <p class="descripcion">
+            Imágenes ilustrativas del mundo del entrenamiento,
+            la fuerza y la actividad física.
+        </p>
+
+        <div class="galeria-grid">
+
+            <img class="grande"
+            src="https://scontent.flpb1-1.fna.fbcdn.net/v/t39.30808-6/474626555_693591926606988_6147851878128874985_n.jpg?stp=dst-jpg_tt6&cstp=mx1365x2048&ctp=s1365x2048&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_ohc=7od48N-LLukQ7kNvwG2ffmc&_nc_oc=AdqwQHk_vFqhG2oyh9T2b_MbCCLNf2-HzOvk7ulPeHZXIrbzV446Fwd9dEazTkAzD8eJhMuGQ7WZfIloOdrqQ0E7&_nc_zt=23&_nc_ht=scontent.flpb1-1.fna&_nc_gid=VCRn7MGkRGTfwtt9rYj0gg&_nc_ss=7b289&oh=00_AQRQzkhOgJLKH1o6PBQwelszfYqxEmoixCyjrGfQmHkNxw&oe=6B043D41"
+            alt="Sala de gimnasio">
+
+            <img
+            src="https://media.istockphoto.com/id/2027278927/es/foto/joven-mujer-atl%C3%A9tica-haciendo-ejercicio-con-barra-durante-el-entrenamiento-deportivo-en-un.jpg?s=612x612&w=0&k=20&c=r9pa57g6zvU-keyNhqtZ7dBoWubAmXfMNn1VnXrZWhk="
+            alt="Ejercicio con pesas">
+
+            <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8UUTDYg3Ynh0QhKBAjGp_35vVVY_yYsTi4Ih6TCgyCw&s=10"
+            alt="Entrenamiento físico">
+
+            <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDj-KRYYbpybpYxW-cfqXpaY7PCAlPTl59V2kt3zrGE6vu4vR9_drl0b0M&s=10"
+            alt="Entrenamiento de fuerza">
+
+            <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWcL5jZmOsSlhBuppi4m8G0EdIJjQe6WVrdoz4Ni6oVRpgHXQ5QX6ZhiA&s=10"
+            alt="Actividad física">
+
+        </div>
+    </div>
+</section>
+
+<!-- HORARIOS -->
+
+<section class="horarios" id="horarios">
+    <div class="contenedor dos-columnas">
+
+        <div>
+            <div class="etiqueta">Organiza tu rutina</div>
+            <h2 class="titulo">HORARIOS DE <span>ATENCIÓN</span></h2>
+
+            <p class="descripcion">
+                Planifica tus sesiones y encuentra el momento
+                adecuado para entrenar durante la semana.
+            </p>
+
+            <table class="tabla-horarios">
+                <tr>
+                    <td>Lunes</td>
+                    <td>07:00 - 22:00</td>
+                </tr>
+                <tr>
+                    <td>Martes</td>
+                    <td>07:00 - 22:00</td>
+                </tr>
+                <tr>
+                    <td>Miércoles</td>
+                    <td>07:00 - 22:00</td>
+                </tr>
+                <tr>
+                    <td>Jueves</td>
+                    <td>07:00 - 22:00</td>
+                </tr>
+                <tr>
+                    <td>Viernes</td>
+                    <td>07:00 - 22:00</td>
+                </tr>
+                <tr>
+                    <td>Sábado</td>
+                    <td>08:00 - 20:00</td>
+                </tr>
+                <tr>
+                    <td>Domingo</td>
+                    <td>10:00 - 13:00</td>
+                </tr>
+            </table>
+
+            <p class="nota-horario">
+                Horarios publicados en el registro del gimnasio.
+                Se recomienda confirmar cualquier cambio.
+            </p>
+        </div>
+
+        <div>
+            <img class="foto-horarios"
+            src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=1000&q=85"
+            alt="Equipamiento de gimnasio">
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACTO -->
+
+<section class="contacto" id="contacto">
+    <div class="contenedor contacto-contenido">
+
+        <div class="etiqueta">Estamos para atenderte</div>
+
+        <h2>
+            EL CAMBIO <span>COMIENZA HOY</span>
+        </h2>
+
+        <p>
+            ¿Quieres conocer nuestros planes o comenzar a entrenar?
+            Comunícate con Magnus Training Center y solicita
+            más información.
+        </p>
+
+        <div class="contacto-tarjetas">
+
+            <div class="contacto-item">
+                <div class="icono">📍</div>
+                <h3>Ubicación</h3>
+                <p>Oruro, Bolivia</p>
+                <a class="boton-borde"
+                href="https://www.google.com/maps/search/?api=1&query=MAG​​NUS+GYM+TRAINING+C​​ENTER+Oruro"
+                target="_blank" rel="noopener noreferrer">
+                    Ver en Maps
+                </a>
+            </div>
+
+            <div class="contacto-item">
+                <div class="icono">☎</div>
+                <h3>Teléfono</h3>
+                <p>+591 72480314</p>
+                <a class="boton-borde"
+                href="tel:+59172480314">
+                    Llamar
+                </a>
+            </div>
+
+            <div class="contacto-item">
+                <div class="icono">💬</div>
+                <h3>WhatsApp</h3>
+                <p>Escríbenos para consultar información.</p>
+                <a class="boton boton-whatsapp"
+                href="https://wa.me/59172480314?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20Magnus%20Training%20Center."
+                target="_blank" rel="noopener noreferrer">
+                    Enviar mensaje
+                </a>
+            </div>
+
+        </div>
+
+        <div class="redes">
+            <a class="boton boton-facebook"
+            href="https://www.facebook.com/MagnusGYMTrainingCenter/"
+            target="_blank" rel="noopener noreferrer">
+                Visitar Facebook
+            </a>
+
+            <a class="boton boton-whatsapp"
+            href="https://wa.me/59172480314"
+            target="_blank" rel="noopener noreferrer">
+                Contactar por WhatsApp
+            </a>
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+<!-- PIE DE PÁGINA -->
+
+<footer>
+    <div class="contenedor footer-contenido">
+
+        <p>
+            © 2026 <span>MAGNUS TRAINING CENTER</span>.
+            Todos los derechos reservados.
+        </p>
+
+        <a href="#inicio" class="volver">VOLVER ARRIBA ↑</a>
+
+    </div>
+</footer>
+
+<!-- FUNCIONAMIENTO DEL MENÚ -->
+
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const menu = document.getElementById("menu");
+
+menuBtn.addEventListener("click", function() {
+    menu.classList.toggle("activo");
+
+    if (menu.classList.contains("activo")) {
+        menuBtn.innerHTML = "✕";
+    } else {
+        menuBtn.innerHTML = "☰";
+    }
+});
+
+document.querySelectorAll(".menu a").forEach(function(enlace) {
+    enlace.addEventListener("click", function() {
+        menu.classList.remove("activo");
+        menuBtn.innerHTML = "☰";
+    });
+});
+</script>
+
+</body>
+</html>
